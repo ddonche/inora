@@ -163,6 +163,19 @@ body{
   border:1px solid var(--line);
   margin-bottom:60px;
 }
+/* Inline links in normal page content */
+.panel a{
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color .15s ease;
+}
+
+.panel a:hover{
+  color: #8a0404;
+}
 .h2{font-size:24px;font-weight:700;margin-bottom:28px;color:var(--ink)}
 
 /* TIMELINE */
@@ -310,6 +323,20 @@ body{
   font-size:16px;
   line-height:1.75;
   margin-bottom:18px;
+}
+
+/* Body links inside docs */
+.docSection a{
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color .15s ease;
+}
+
+.docSection a:hover{
+  color: #8a0404;
 }
 
 .docStrong{
