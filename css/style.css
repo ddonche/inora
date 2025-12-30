@@ -286,6 +286,20 @@ body{
   border-color:#8a0404;
 }
 
+/* Full-width dark separator band (drop any content inside) */
+.ctaBand {
+  width: 100%;
+  background: #2a2a2a;
+  color: #f5f5f5;
+  padding: 3rem 0;
+  margin: 60px 0; /* same rhythm as .panel */
+}
+
+/* Inner alignment (uses your existing .wrap for width) */
+.ctaBandIn {
+  text-align: center;
+}
+
 .formNote{
   font-size:13px;
   color:var(--muted);

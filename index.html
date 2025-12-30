@@ -142,6 +142,32 @@
 
         </div>
 
+        <section class="ctaBand">
+          <div class="wrap ctaBandIn">
+
+            <h2 class="ctaTitle">Join the Founding List</h2>
+            <p class="ctaDesc">
+              Sign up to be notified when the civic forum launches and citizenship opens.
+            </p>
+
+            <form action="https://buttondown.com/api/emails/embed-subscribe/donche"
+                  method="post"
+                  target="popupwindow"
+                  class="newsletterForm">
+              <input
+                type="email"
+                name="email"
+                id="bd-email"
+                placeholder="your@email.com"
+                required
+              />
+              <button type="submit">Get Notified</button>
+              <input type="hidden" value="1" name="embed" />
+            </form>
+
+          </div>
+        </section>
+
         <!-- Development Timeline -->
         <section class="panel" id="timeline">
           <h2 class="h2">Development Timeline</h2>
@@ -304,6 +330,17 @@
         window.scrollTo({ top: y, behavior: 'smooth' });
         history.replaceState(null, '', id);
       });
+    });
+  </script>
+
+  <script>
+  fetch('/.netlify/functions/subscribers')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('subscriber-count').textContent = data.count;
+    })
+    .catch(() => {
+      document.getElementById('subscriber-count').textContent = 'Many';
     });
   </script>
 </body>
