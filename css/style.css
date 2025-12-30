@@ -163,19 +163,14 @@ body{
   border:1px solid var(--line);
   margin-bottom:60px;
 }
-/* Inline links in normal page content */
-.panel a{
+.inlineLink{
   color: var(--red);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   font-weight: 700;
-  transition: color .15s ease;
 }
-
-.panel a:hover{
-  color: #8a0404;
-}
+.inlineLink:hover{ color:#8a0404; }
 .h2{font-size:24px;font-weight:700;margin-bottom:28px;color:var(--ink)}
 
 /* TIMELINE */
@@ -243,6 +238,60 @@ body{
 .itemDate{font-size:12px;color:#999;font-weight:600}
 .itemTitle{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .itemDesc{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* NEWSLETTER FORM */
+.newsletterForm{
+  display:flex;
+  gap:12px;
+  margin:24px 0;
+  flex-wrap:wrap;
+}
+
+.newsletterForm input[type="email"]{
+  flex:1;
+  min-width:250px;
+  padding:14px 16px;
+  font-size:14px;
+  border:2px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  font-family:inherit;
+  transition:border-color .2s ease;
+}
+
+.newsletterForm input[type="email"]:focus{
+  outline:none;
+  border-color:var(--red);
+}
+
+.newsletterForm input[type="email"]::placeholder{
+  color:var(--muted);
+}
+
+.newsletterForm button{
+  padding:14px 28px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.5px;
+  background:var(--red);
+  color:#fff;
+  border:2px solid var(--red);
+  cursor:pointer;
+  font-family:inherit;
+  transition:all .2s ease;
+}
+
+.newsletterForm button:hover{
+  background:#8a0404;
+  border-color:#8a0404;
+}
+
+.formNote{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-top:12px;
+}
 
 /* FOOTER */
 .foot{background:var(--dark);color:#fff;padding:48px 0 32px}
@@ -452,4 +501,16 @@ body{
   .item{padding:18px}
   .foot{padding:36px 0 24px}
   .footGrid{grid-template-columns:1fr}
+  .newsletterForm{
+    flex-direction:column;
+  }
+  
+  .newsletterForm input[type="email"]{
+    width:100%;
+    min-width:100%;
+  }
+  
+  .newsletterForm button{
+    width:100%;
+  }
 }
