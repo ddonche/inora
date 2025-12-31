@@ -124,6 +124,46 @@ body{
 .h1{font-size:36px;font-weight:900;margin-bottom:12px;color:var(--ink)}
 .lead{font-size:16px;color:var(--muted);margin-bottom:40px;max-width:800px}
 
+/* HERO (intro text + flag) */
+.heroText{min-width:0}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:48px;
+  align-items:center;
+  margin-bottom:48px;
+}
+
+/* RIGHT COLUMN */
+.heroMedia{
+  max-width:100%;
+  overflow:hidden;            /* <-- critical */
+  display:flex;
+  justify-content:flex-end;
+}
+
+/* IMAGE */
+.heroFlag{
+  max-width:100%;             /* <-- critical */
+  height:auto;
+  display:block;
+  object-fit:contain;         /* <-- ensures full image fits */
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .hero{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .heroMedia{justify-content:flex-start}
+  .heroFlag{
+    max-width:100%;
+    height:auto;
+  }
+}
+
 /* SERVICES GRID */
 .services{
   display:grid;
